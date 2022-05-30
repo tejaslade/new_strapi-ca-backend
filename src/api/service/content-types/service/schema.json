@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "service"
+    "displayName": "service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,15 +25,15 @@
       "required": true
     },
     "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": false
+      ]
     },
     "feed_forms": {
       "type": "relation",
@@ -45,6 +46,16 @@
       "relation": "oneToMany",
       "target": "api::image.image",
       "mappedBy": "service"
+    },
+    "service_cateogory": {
+      "type": "enumeration",
+      "enum": [
+        "Accounting ",
+        "Audit",
+        "Feedform "
+      ],
+      "default": "Feedform ",
+      "required": true
     }
   }
 }
