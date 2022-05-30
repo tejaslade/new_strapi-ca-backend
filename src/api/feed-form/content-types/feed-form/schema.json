@@ -29,6 +29,10 @@
       "relation": "manyToOne",
       "target": "api::service.service",
       "inversedBy": "feed_forms"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

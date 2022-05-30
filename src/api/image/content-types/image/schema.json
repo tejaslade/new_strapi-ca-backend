@@ -35,6 +35,17 @@
       "relation": "manyToOne",
       "target": "api::service.service",
       "inversedBy": "images"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "image_remarks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::image-remark.image-remark",
+      "mappedBy": "image"
     }
   }
 }

@@ -105,6 +105,10 @@
       "relation": "oneToMany",
       "target": "api::contact.contact",
       "mappedBy": "users_permissions_user"
+    },
+    "userBlocked": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
